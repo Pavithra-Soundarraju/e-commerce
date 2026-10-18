@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="dist/app.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>My E-Commerce Store</h1>
+        <p>Find your favourite products</p>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+
+        <p id="message">Loading products...</p>
+
+        <!-- Search, filters and cart button -->
+        <div class="toolbar">
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search products by name..."
+            >
+
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+            </select>
+
+            <select id="sort-price">
+                <option value="default">Sort by Price</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+            </select>
+
+            <button id="view-cart-button" type="button">
+    View Cart (<span id="cart-badge">0</span>)
+</button>
+
+
+            <button id="view-wishlist-button" type="button">
+    View Wishlist
+</button>
+
+        </div>
+
+        <!-- Product details appear when a product is clicked -->
+        <section id="product-detail" hidden></section>
+
+        <!-- Products appear here -->
+        <section id="product-container"></section>
+
+    </main>
+
+</body>
+</html>
